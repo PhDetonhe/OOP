@@ -1,0 +1,100 @@
+public class Computador {
+        String monitor;
+        String cpu;
+        String gpu;
+        String fonte;
+        String memoriaRam;
+        String placaMae;
+        String ssd;
+
+        public String getMonitor() {
+                return monitor;
+        }public void setMonitor(String monitor) {
+                this.monitor = monitor;
+        }
+
+        public String getCpu() {
+                return cpu;
+        }public void setCpu(String cpu) {
+                this.cpu = cpu;
+        }
+
+        public String getGpu() {
+                return gpu;
+        }public void setGpu(String gpu) {
+                this.gpu = gpu;
+        }
+
+        public String getFonte() {
+                return fonte;
+        }public void setFonte(String fonte) {
+                this.fonte = fonte;
+        }
+
+        public String getMemoriaRam() {
+                return memoriaRam;
+        }public void setMemoriaRam(String memoriaRam) {
+                this.memoriaRam = memoriaRam;
+        }
+
+        public String getPlacaMae() {
+                return placaMae;
+        }public void setPlacaMae(String placaMae) {
+                this.placaMae = placaMae;
+        }
+
+        public String getSsd(){
+                return ssd;
+        }public void setSsd(String ssd){
+                this.ssd = ssd;
+        }
+
+}
+
+
+import java.util.Scanner;
+public class objComputador {
+    public static void main(String[] args) {
+        Computador objPc = new Computador();
+        Scanner ler = new Scanner(System.in);
+
+        System.out.println("insira a quantidade de computadores");
+        int inf = ler.nextInt();
+        ler.nextLine();
+
+        for(int i = 0; i < inf; i++){
+        System.out.println("Insira o monitor:");
+        String monitor = ler.nextLine();
+        System.out.println("Insira a cpu:");
+        String cpu = ler.nextLine();
+        System.out.println("Insira a gpu:");
+        String gpu = ler.nextLine();
+        System.out.println("Insira a fonte:");
+        String fonte = ler.nextLine();
+        System.out.println("Insira a memoriaRam:");
+        String memoriaRam = ler.nextLine();
+        System.out.println("Insira a placaMãe:");
+        String placaMae = ler.nextLine();
+
+        ;
+
+        objPc.setMonitor(monitor);
+            objPc.setCpu(cpu);
+            objPc.setGpu(gpu);
+            objPc.setFonte(fonte);
+            objPc.setMemoriaRam(memoriaRam);
+            objPc.setPlacaMae(placaMae);
+
+        System.out.println("----------Computador--------------");
+        System.out.println("tipo: "+objPc.getMonitor());
+        System.out.println("cor: "+ objPc.getCpu());
+        System.out.println("velocidade: "+ objPc.getGpu());
+        System.out.println("quantidade de assentos: " + objPc.getFonte());
+        System.out.println("quantidade de assentos: " + objPc.getMemoriaRam());
+        System.out.println("quantidade de assentos: " + objPc.getPlacaMae());
+        System.out.println("----------------------------");
+        }
+
+    }
+}
+
