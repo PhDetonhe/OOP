@@ -1,0 +1,106 @@
+package modifiers;
+
+class Carro {
+    private int velocidadeMaxima;
+    private String cor;
+    private String modelo;
+
+    public int getVelocidadeMaxima() {
+        return velocidadeMaxima;
+    }
+
+    public void setVelocidadeMaxima(int velocidade) {
+        this.velocidadeMaxima = velocidade;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String nomeModelo) {
+        this.modelo = nomeModelo;
+    }
+}
+
+
+package modificadores;
+
+class Pessoa {
+    private String nomePessoa;
+    private int idadePessoa;
+    private String ocupacao;
+    private Carro meuCarro;
+
+    public void adquirirCarro(String cor, String modelo, int velocidade) {
+        meuCarro = new Carro();
+        meuCarro.setCor(cor);
+        meuCarro.setModelo(modelo);
+        meuCarro.setVelocidadeMaxima(velocidade);
+    }
+
+    public Carro getMeuCarro() {
+        return meuCarro;
+    }
+
+    public void setMeuCarro(Carro carro) {
+        this.meuCarro = carro;
+    }
+
+    public String getNomePessoa() {
+        return nomePessoa;
+    }
+
+    public void setNomePessoa(String nome) {
+        this.nomePessoa = nome;
+    }
+
+    public int getIdadePessoa() {
+        return idadePessoa;
+    }
+
+    public void setIdadePessoa(int idade) {
+        this.idadePessoa = idade;
+    }
+
+    public String getOcupacao() {
+        return ocupacao;
+    }
+
+    public void setOcupacao(String ocupacao) {
+        this.ocupacao = ocupacao;
+    }
+}
+
+package modificadores;
+import java.util.Scanner;
+
+public class ObjetoPessoaAutomovel {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        Pessoa cliente = new Pessoa();
+
+        System.out.println("Informe o modelo do carro:");
+        String modelo = entrada.nextLine();
+
+        System.out.println("Informe a cor do carro:");
+        String corCarro = entrada.nextLine();
+
+        System.out.println("Informe a velocidade máxima do carro:");
+        int velocidadeMaxima = entrada.nextInt();
+
+        cliente.adquirirCarro(corCarro, modelo, velocidadeMaxima);
+
+        Carro carroComprado = cliente.getMeuCarro();
+
+        System.out.println("O carro adquirido foi um " + carroComprado.getModelo() + " na cor " + carroComprado.getCor() + ", com velocidade máxima de " + carroComprado.getVelocidadeMaxima() + " km/h.");
+    }
+}
