@@ -1,0 +1,19 @@
+
+package mesdoano;
+
+public enum Meses {
+    JAN,
+    FEV,
+    MAR;
+}
+
+package mesdoano;
+
+public class ObjetoMes {
+    public static void main(String[] args) {
+
+        for (Meses mesAtual : Meses.values()) {
+            System.out.println("Mês: " + mesAtual);
+        }
+    }
+}
