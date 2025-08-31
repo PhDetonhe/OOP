@@ -1,19 +1,18 @@
-
-package mesdoano;
-
+package mes;
 public enum Meses {
-    JAN,
-    FEV,
-    MAR;
+    janeiro,
+    fevereiro,
+    marco,
 }
 
-package mesdoano;
+package mes;
 
-public class ObjetoMes {
+public class Objetomes {
     public static void main(String[] args) {
 
-        for (Meses mesAtual : Meses.values()) {
-            System.out.println("Mês: " + mesAtual);
+        for(Meses meses : Meses.values()){
+            System.out.println(meses);
         }
     }
 }
+
