@@ -1,0 +1,40 @@
+package Carro;
+
+class Carro {
+    private String numeroChassi;
+    private String placa;
+
+    public Carro(String numeroChassi, String placa) {
+        this.numeroChassi = numeroChassi;
+        this.placa = placa;
+    }
+    public String getNumeroChassi() {
+        return numeroChassi;
+    }
+    public void setNumeroChassi(String numeroChassi) {
+        this.numeroChassi = numeroChassi;
+    }
+    public String getPlaca() {
+        return placa;
+    }
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+
+}
+
+
+
+
+public class MetodoAnimal {
+    public static void main(String[] args) {
+        Carro carro1 = new Carro("54smlaVzXYJay2247", "HDI-2588");
+        Carro carro2 = new Carro("5DEzAw4umjpM47577", "NAR-7052");
+
+        System.out.println("Carro placa: "+ carro1.getPlaca() + " numero do chassi: " + carro1.getNumeroChassi());
+        System.out.println("Carro 2 placa: "+ carro2.getPlaca() + " numero do chassi: "+ carro2.getNumeroChassi());
+
+
+    }
+}
