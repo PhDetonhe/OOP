@@ -1,0 +1,56 @@
+package Consulta;
+import java.time.LocalDate;
+
+class Consulta {
+    private String pacienteNome;
+    private String dentistaNome;
+    private LocalDate data;
+
+    public Consulta(String pacienteNome, String dentistaNome, LocalDate data) {
+        this.pacienteNome = pacienteNome;
+        this.dentistaNome = dentistaNome;
+        this.data = data;
+    }
+    public String getpacienteNome () {
+        return pacienteNome;
+    }
+    public void getpacienteNome(String pacienteNome) {
+        this.pacienteNome = pacienteNome;
+    }
+    public String getDentistaNome() {
+        return dentistaNome;
+    }
+    public void setDentistaNome(String dentistaNome) {
+        this.dentistaNome = dentistaNome;
+    }
+    public LocalDate getData() {
+        return data;
+    }
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+
+}
+
+
+
+
+package Consulta;
+import java.time.LocalDate;
+
+public class MetodoConsulta {
+    LocalDate hoje = LocalDate.now();
+    public static void main(String[] args) {
+
+        Consulta consulta1 = new Consulta("Davi", "Dr felps", LocalDate.now());
+        Consulta consulta2 = new Consulta("Vinicius", "Dra Giulia", LocalDate.now());
+
+
+        System.out.println("Consulta: \n nome paciente:" + consulta1.getpacienteNome() + "\n Dentista: " + consulta1.getDentistaNome() + "\n Data:" + LocalDate.now() );
+        System.out.println("Consulta: \n nome paciente:" + consulta2.getpacienteNome() + "\n Dentista: " + consulta2.getDentistaNome() + "\n Data:" + LocalDate.now() );
+
+    }
+}
+
+
