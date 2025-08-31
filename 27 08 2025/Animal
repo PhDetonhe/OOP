@@ -1,0 +1,54 @@
+package Animal;
+
+class Animal {
+    private int peso;
+    private String cor;
+    private String tamanho;
+
+    public Animal(int peso, String cor, String tamanho) {
+        this.peso = peso;
+        this.cor = cor;
+        this.tamanho = tamanho;
+    }
+
+    public Animal(int peso){
+        this.peso = peso;
+    }
+    public Animal(String tamanho){
+        this.tamanho= tamanho;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+    public String getCor(){
+        return cor;
+    }
+    public void setCor(String cor){
+        this.cor = cor;
+    }
+    public String getTamanho(){
+        return tamanho;
+    }
+    public void setTamanho(String tamanho){
+        this.tamanho = tamanho;
+    }
+
+}
+
+package Animal;
+
+public class MetodoAnimal {
+    public static void main(String[] args) {
+        Animal animal1 = new Animal(40, "verde", "medio");
+        Animal animal2 = new Animal("pequeno");
+
+        System.out.println("Animal 1: "+ animal1.getCor() + animal1.getTamanho() + animal1.getPeso());
+        System.out.println("Animal 2: "+ animal2.getTamanho());
+
+
+    }
+}
