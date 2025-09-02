@@ -1,0 +1,65 @@
+package Cliente;
+
+class Cliente {
+    private int id;
+    private String nome, telefone, cpf, rg;
+
+    public Cliente(String nome, String telefone, String cpf, String rg, int id) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.id = id;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public String getTelefone(){
+        return telefone;
+    }
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
+    }
+    public String getCpf(){
+        return cpf;
+    }
+    public void setCpf(String cpf){
+        this.cpf = cpf;
+    }
+    public String getRg(){
+        return rg;
+    }
+    public void setRg(String rg){
+        this.rg = rg;
+    }
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id = id;
+    }
+
+
+
+
+}
+
+
+package Cliente;
+import java.time.LocalDate;
+
+public class Cliente2 {
+    LocalDate hoje = LocalDate.now();
+    public static void main(String[] args) {
+
+        Cliente cliente3 = new Cliente("vinicius", "(10)1234-5678", "456713-12","99.887766.55",13766);
+
+        System.out.println("Dados do cliente:" + cliente3.getNome() + "\n" + cliente3.getTelefone() + "\n" + cliente3.getCpf() + "\n" + cliente3.getRg() + "\n" + cliente3.getId() );
+    }
+}
+
+
