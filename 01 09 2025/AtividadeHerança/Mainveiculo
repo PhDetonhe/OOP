@@ -1,0 +1,13 @@
+package Veiculo;
+
+public class Mainveiculo {
+    public static void maind(String [] args){
+
+        Automovel carro = new Automovel("toyota", "Azul","Corolla",2009, "2.0", 4);
+
+        Moto moto = new Moto("Yahama","preta","MT-09", 2020,750 );
+
+        System.out.println("Carro: "+carro.getMarca() + carro.getCor() +carro.getModelo() + carro.getAno() + carro.getMotor() + carro.getNumeroPortas());
+        System.out.println("moto:" + moto.getMarca() + moto.getCor() + moto.getModelo() + moto.getAno() + moto.getCilindrada());
+    }
+}
