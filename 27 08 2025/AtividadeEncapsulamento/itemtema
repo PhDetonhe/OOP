@@ -1,0 +1,44 @@
+package Cliente;
+
+class itemtema {
+    private int id;
+    private String nome, descricao;
+
+    public itemtema(String nome,int id, String descricao) {
+        this.nome = nome;
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public String getDescricao(){
+        return descricao;
+    }
+    public void setDescricao(String descricao){
+        this.descricao = descricao;
+    }
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id = id;
+    }
+
+}
+
+package Cliente;
+
+public class itemtema {
+    public static void main(String[] args) {
+
+        itemtema itemtema3 = new itemtema("capuz vermelho", 74653, "capuz longo feito de lã");
+
+        System.out.println("Dados do cliente:" + itemtema3.getNome() + "\n" + itemtema3.getId() + "\n" + itemtema3.getDescricao() );
+    }
+}
+
