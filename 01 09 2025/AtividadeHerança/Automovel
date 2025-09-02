@@ -1,0 +1,25 @@
+package Veiculo;
+
+public class Automovel extends veiculo {
+    private String motor;
+    private int numeroPortas;
+
+    public Automovel(String marca, String cor, String modelo, int ano, String motor, int numeroPortas){
+        super(marca, cor, modelo, ano);
+        this.motor = motor;
+        this.numeroPortas = numeroPortas;
+    }
+
+    public String getMotor(){
+        return motor;
+    }
+    public void setMotor(String motor){
+        this.motor = motor;
+    }
+    public int getNumeroPortas(){
+        return numeroPortas;
+    }
+    public void ssetNumeroPortas(int numeroPortas){
+        this.numeroPortas = numeroPortas;
+    }
+}
