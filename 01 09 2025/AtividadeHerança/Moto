@@ -1,0 +1,17 @@
+package Veiculo;
+
+public class Moto extends veiculo {
+    private int cilindrada;
+
+    public Moto(String marca, String cor, String modelo, int ano,int cilindrada){
+        super(marca, cor, modelo, ano);
+        this.cilindrada = cilindrada;
+    }
+
+    public int getCilindrada(){
+        return cilindrada;
+    }
+    public void setCilindrada(int cilindrada){
+        this.cilindrada = cilindrada;
+    }
+}
