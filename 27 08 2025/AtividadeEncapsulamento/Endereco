@@ -1,0 +1,82 @@
+package Cliente;
+
+class Endereco {
+    private String cep, complemento, bairro, cidade, uf;
+    private long id;
+    private int numeroResidencia;
+
+    public Endereco(String cep, int numeroResidencia, long id) {
+        this.cep = cep;
+        this.numeroResidencia = numeroResidencia;
+        this.id = id;
+    }
+
+    public Endereco(long id, String complemento, String bairro, String cidade, String uf) {
+        this.id = id;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.uf = uf;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+    public String getComplemento() {
+        return complemento;
+    }
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+    public String getBairro() {
+        return bairro;
+    }
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+    public String getCidade() {
+        return cidade;
+    }
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+    public String getUf() {
+        return uf;
+    }
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
+    public int getNumeroResidencia() {
+        return numeroResidencia;
+    }
+    public void setNumeroResidencia(int numeroResidencia) {
+        this.numeroResidencia = numeroResidencia;
+    }
+
+}
+
+package Cliente;
+
+public class endereco2 {
+    public static void main(String[] args) {
+
+        Endereco endereco3 = new Endereco("erjnin",9999, 12344 );
+        Endereco endereco4 = new Endereco(1234, "Casa", "Centro", "Sorocaba", "SP");
+
+        System.out.println("Endereco1: "+  "\n" + endereco3.getCep() + "\n"+ endereco3.getNumeroResidencia() + "\n" + endereco3.getId());
+        System.out.println("Endereco2: " + "\n" + endereco4.getBairro() + "\n" + endereco4.getNumeroResidencia() + "\n" + endereco4.getId() + "\n" + endereco4.getComplemento() + "\n" + endereco4.getCep() + "\n" + endereco4.getCidade() + "\n" + endereco4.getUf());
+
+
+    }
+
+
+}
