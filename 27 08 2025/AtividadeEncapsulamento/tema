@@ -1,0 +1,54 @@
+package Cliente;
+
+class Tema {
+    private int id;
+    private double aluguel;
+    private String nome, corToalha;
+
+
+    public Tema(int id, double aluguel, String nome, String corToalha){
+        this.id = id;
+        this.aluguel = aluguel;
+        this.nome = nome;
+        this.corToalha = corToalha;
+
+    }
+
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id = id;
+    }
+    public double getAluguel(){
+        return aluguel;
+    }
+    public void setAluguel(double aluguel){
+        this.aluguel = aluguel;
+    }
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public String getCorToalha(){
+        return corToalha;
+    }
+    public void setcorToalha(String corToalha){
+        this.corToalha = corToalha;
+    }
+
+}
+
+package Cliente;
+
+public class tema2 {
+    public static void main(String[] args) {
+
+        Tema tema3 = new Tema(234566, 350.50, "chapeuzinho vermelho", "vermelho");
+
+        System.out.println("Tema da festa: " + tema3.getNome() + "\n" + tema3.getId() + "\n" + tema3.getAluguel() + "\n" + tema3.getCorToalha());
+    }
+}
+
