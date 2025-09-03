@@ -1,0 +1,13 @@
+package Computador;
+
+public interface Computador {
+    void ligar();
+
+    void desligar();
+
+    void  reniciar();
+
+    void carregandoSistema();
+
+
+}
