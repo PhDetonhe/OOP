@@ -1,0 +1,33 @@
+package Funcionario;
+
+public class horista extends funcionario implements calculaSalario {
+    double valorHoras;
+    int quantidadeHoras;
+
+    public horista(String nome, String telefone, String endereco, long id, int matricula, double valorHoras, int quantidadeHoras){
+        super(nome, telefone, endereco, id, matricula);
+        this.valorHoras = valorHoras;
+        this.quantidadeHoras = quantidadeHoras;
+
+    }
+
+    @Override
+    public double Salario () {
+        return valorHoras * quantidadeHoras;
+    }
+
+    public double getValorHoras(){
+        return valorHoras;
+    }
+    public void setValorHoras(double valorHoras){
+        this.valorHoras = valorHoras;
+    }
+    public int getQuantidadeHoras(){
+        return quantidadeHoras;
+    }
+    public void setQuantidadeHoras(int quantidadeHoras){
+        this.quantidadeHoras = quantidadeHoras;
+    }
+
+    
+}
