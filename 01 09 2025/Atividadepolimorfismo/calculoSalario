@@ -1,0 +1,7 @@
+package Funcionario;
+
+public interface calculaSalario {
+    double Salario();
+
+
+}
