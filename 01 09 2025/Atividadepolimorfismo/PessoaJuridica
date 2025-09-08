@@ -1,0 +1,32 @@
+package Funcionario;
+
+public class pessoajuridica extends funcionario implements calculaSalario {
+    double valorBruto;
+    double imposto;
+
+    public pessoajuridica(String nome, String telefone, String endereco, long id, int matricula, double valorBruto, double imposto) {
+        super(nome, telefone, endereco, id, matricula);
+        this.valorBruto = valorBruto;
+        this.imposto = imposto;
+
+    }
+
+    @Override
+    public double Salario () {
+        return valorBruto - imposto;
+    }
+
+    public double getValorBruto(){
+        return valorBruto;
+    }
+    public void setValorBruto(double valorBruto){
+        this.valorBruto = valorBruto;
+    }
+    public double getImposto(){
+        return imposto;
+    }
+    public void setImposto(double imposto) {
+        this.imposto = imposto;
+    }
+
+}
