@@ -1,0 +1,88 @@
+package Funcionario;
+import java.util.Scanner;
+
+public class Option {
+    public static void main(String[] args) {
+        String nome, telefone, endereco;
+        long id;
+        int matricula;
+        double calculaSalario;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Selecione o tipo de funcionario:");
+        System.out.println("1. Jornada");
+        System.out.println("2. Horista");
+        System.out.println("3. PJ");
+        int option = scan.nextInt();
+
+        System.out.println("insira as informações do funcionario Jornada:");
+        System.out.println("Nome:");
+        scan.nextLine();
+        nome = scan.nextLine();
+        System.out.println("telefone:");
+        telefone = scan.nextLine();
+        System.out.println("Endereco");
+        endereco = scan.nextLine();
+        System.out.println("ID");
+        id = scan.nextLong();
+        System.out.println("matricula");
+        matricula = scan.nextInt();
+
+
+
+
+        switch (option){
+            case 1:
+                System.out.println("Jornada selecionada: Digite as horas trabalhdas. ");
+                int horasTrabalhadas = scan.nextInt();
+                System.out.println("Informe o valor da hora");
+                double valorHora = scan.nextDouble();
+                jornada J = new jornada(nome, telefone, endereco,  id,  matricula,  valorHora,  horasTrabalhadas);
+                System.out.println(nome);
+                System.out.println(telefone);
+                System.out.println(endereco);
+                System.out.println(id);
+                System.out.println(matricula);
+                System.out.println(valorHora);
+                System.out.println(horasTrabalhadas);
+                System.out.println("Salário Jornada R$ " + J.Salario());
+                break;
+            case 2:
+                System.out.println("Horista selecionado: Digite as horas trabalhdas. ");
+                int quantidadeHoras = scan.nextInt();
+                System.out.println("Informe o valor da hora");
+                double valorHoras= scan.nextDouble();
+                horista H = new horista(nome, telefone, endereco,  id,  matricula, valorHoras, quantidadeHoras);
+                H.Salario();
+                System.out.println(nome);
+                System.out.println(telefone);
+                System.out.println(endereco);
+                System.out.println(id);
+                System.out.println(matricula);
+                System.out.println(valorHoras);
+                System.out.println(quantidadeHoras);
+                System.out.println("Salário Horista: R$ " + H.Salario());
+                break;
+            case 3:
+                System.out.println("PJ selecionado: Digite o valor bruto:");
+                double valorBruto = scan.nextDouble();
+                System.out.println("Informe o imposto:");
+                double Imposto = scan.nextDouble();
+                pessoajuridica PJ = new pessoajuridica(nome, telefone, endereco,  id,  matricula, valorBruto, Imposto);
+                PJ.Salario();
+                System.out.println(nome);
+                System.out.println(telefone);
+                System.out.println(endereco);
+                System.out.println(id);
+                System.out.println(matricula);
+                System.out.println(valorBruto);
+                System.out.println(Imposto);
+                System.out.println("Salário PJ: R$ " + PJ.Salario());
+                break;
+
+
+        }
+
+    }
+}
